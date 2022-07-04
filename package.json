@@ -1,0 +1,45 @@
+{
+  "name": "{{NPM_PACKAGE_NAME}}",
+  "version": "0.0.0",
+  "description": "",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "files": [
+    "build/src"
+  ],
+  "license": "{{PACKAGE_LICENSE}}",
+  "keywords": [],
+  "scripts": {
+    "test": "ng test {{PROJECT_NAME}}",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "ng build {{PROJECT_NAME}} --configuration=production",
+    "fix": "gts fix",
+    "prepare": "yarn run compile",
+    "pretest": "yarn run compile",
+    "posttest": "yarn run lint"
+  },
+  "dependencies": {
+    "tslib": "^2.4.0"
+  },
+  "peerDependencies": {
+    "@angular/common": "^14.0.4",
+    "@angular/core": "^14.0.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^14.0.2",
+    "@angular/cli": "~14.0.2",
+    "@angular/compiler-cli": "^14.0.0",
+    "@types/jasmine": "~4.0.0",
+    "@types/node": "^14.11.2",
+    "gts": "^3.1.0",
+    "jasmine-core": "~4.1.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.0.0",
+    "karma-jasmine-html-reporter": "~1.7.0",
+    "ng-packagr": "^14.0.2",
+    "typescript": "~4.7.2"
+  }
+}
